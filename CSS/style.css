@@ -1,0 +1,156 @@
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body li {
+  list-style: none;
+}
+
+main {
+  background: white;
+  max-width: 77rem;
+  display: flex;
+  box-shadow: 0 50px 50px -20px hsla(238, 29%, 16%, 0.3);
+  border-radius: 2rem;
+  background-image: url(https://raw.githubusercontent.com/red-jpo/FAQ-accordion-card-solution/990c7a5b36ef8ad09bf0eac5fc99ce3e09855d5f/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: -47rem -24.5rem;
+}
+
+.hero-container {
+  position: relative;
+  width: 38.5rem;
+}
+.hero-container .img-woman-mobile {
+  display: none;
+}
+.hero-container .img-woman-desktop {
+  position: absolute;
+  top: 5rem;
+  left: -6.4rem;
+  -webkit-clip-path: inset(0 0 0 6.4rem);
+          clip-path: inset(0 0 0 6.4rem);
+}
+.hero-container .img-box {
+  position: absolute;
+  top: 16.7rem;
+  left: -8rem;
+}
+
+.faq-container {
+  width: 38.5rem;
+  padding: 5.5rem 10rem 7rem 0;
+}
+.faq-container h1 {
+  padding-bottom: 2rem;
+  color: hsl(238, 29%, 16%);
+  font-size: 2.7rem;
+  line-height: 2.7rem;
+}
+
+.faq-question {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.faq-question .question-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1.5rem 0;
+  color: hsl(237, 12%, 33%);
+  font-size: 1.2rem;
+}
+.faq-question .question-toggle:hover {
+  color: hsl(14, 88%, 65%);
+  font-weight: 700;
+}
+.faq-question .question-toggle:focus,
+.faq-question .question-toggle .selected {
+  font-weight: 700;
+}
+.faq-question p {
+  display: none;
+  color: hsl(240, 6%, 50%);
+  margin-bottom: 1.3rem;
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+.faq-question .toggle-arrow {
+  transition: transform 0.3s ease-in-out;
+}
+.faq-question .toggle-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 3vh;
+  color: hsl(237, 12%, 33%);
+}
+.footer a {
+  text-decoration: none;
+  color: hsl(238, 29%, 16%);
+  opacity: 70%;
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    width: 27.3rem;
+    background-image: url(https://raw.githubusercontent.com/red-jpo/FAQ-accordion-card-solution/990c7a5b36ef8ad09bf0eac5fc99ce3e09855d5f/images/bg-pattern-mobile.svg);
+    background-position: top;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-container {
+    width: 100%;
+  }
+  .hero-container .img-woman-desktop,
+  .hero-container .img-box {
+    display: none;
+  }
+  .hero-container .img-woman-mobile {
+    display: flex;
+    position: absolute;
+    top: -8.75rem;
+    left: 4.15rem;
+    width: 70%;
+  }
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 23.25rem;
+    padding: 11rem 0 5rem;
+  }
+  .faq-container h1 {
+    margin: 0;
+    padding-bottom: 25px;
+    font-size: 32px;
+  }
+  .faq-question {
+    width: 20rem;
+  }
+  .faq-question .question-toggle {
+    font-size: 1rem;
+  }
+  .faq-question .question-toggle:focus,
+  .faq-question .question-toggle .selected {
+    color: hsl(237, 12%, 33%);
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=style.css.map */
